@@ -18,7 +18,7 @@ const LoginModal = ({ isOpen, onClose }) => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/login", {
+      const response = await axios.post("https://wanderwise-4.onrender.com/login", {
         email,
         password,
       });
