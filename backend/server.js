@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const cors = require('cors');
 const axios = require('axios');
 const jwt = require('jsonwebtoken');
+const path = require("path");
 const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
@@ -487,6 +488,14 @@ app.post('/sendMessage', async (req, res) => {
     console.error(err);
     res.status(500).json({ error: 'Internal server error' });
   }
+});
+
+// Serve the built frontend files
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+// Route any unmatched requests to the frontend
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
 
 
