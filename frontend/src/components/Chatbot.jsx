@@ -20,7 +20,7 @@ const ChatBot = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/chathistory/${email}`);
+        const res = await axios.get(`https://wanderwise-4.onrender.com/chathistory/${email}`);
         
         const normalized = res.data.chatHistory.map(msg => ({
           role: msg.role,

@@ -18,7 +18,7 @@ const SignUpModal = ({ isOpen, onClose, onSuccess }) => {
       return;
     }
     try {
-      const response = await axios.post('http://localhost:3000/register', {
+      const response = await axios.post('https://wanderwise-4.onrender.com/register', {
         name,
         email,
         password,
@@ -50,7 +50,7 @@ const SignUpModal = ({ isOpen, onClose, onSuccess }) => {
         <div
           className="hidden lg:block lg:w-1/2 bg-cover"
           style={{
-            backgroundImage: `url(https://www.tailwindtap.com//assets/components/form/userlogin/login_tailwindtap.jpg)`,
+            backgroundImage: `url(https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=600&q=80)`,
             backgroundSize: "cover", // Ensures the image fully covers the area
             backgroundPosition: "center", // Centers the image
             backgroundRepeat: "no-repeat", // Prevents tiling

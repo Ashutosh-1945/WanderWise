@@ -19,11 +19,11 @@ function Details() {
   const handleSubmit = async () => {
     if(isAuthenticated){
       setLoading(true);
-      const token = localStorage.getItem("accessToken"); // retriving the token from local storange
+      const token = localStorage.getItem("accessToken"); 
       var email = 0;
       if (token) {
         const decoded = jwtDecode(token);
-        email = decoded.email; // Decode the token
+        email = decoded.email;
       }      
       const data = { email: email,
         destination: place,
@@ -36,7 +36,7 @@ function Details() {
         hotels: {}
       }
       try {
-        const response = await axios.post("http://localhost:3000/details", {
+        const response = await axios.post("https://wanderwise-4.onrender.com/details", {
           data
         });  
         setLoading(false);

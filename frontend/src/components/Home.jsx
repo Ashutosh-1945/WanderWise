@@ -27,7 +27,7 @@ function Home() {
           email = decoded.email;
         }
 
-        const response = await axios.get("http://localhost:3000/getplan", {
+        const response = await axios.get("https://wanderwise-4.onrender.com/getplan", {
           params: { email },
         });
 

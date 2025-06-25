@@ -27,7 +27,7 @@ function Weather() {
             email = decoded.email;
           }
   
-          const response = await axios.get("http://localhost:3000/getHotels", {
+          const response = await axios.get("https://wanderwise-4.onrender.com/getHotels", {
             params: { email },
           });
           console.log(response.data.data)

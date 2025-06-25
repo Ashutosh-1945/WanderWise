@@ -3,14 +3,14 @@ import axios from "axios";
 import { UserContext } from "../UserConext";
 
 const LoginModal = ({ isOpen, onClose }) => {
-  const {login} = useContext(UserContext);  // Use the context
+  const {login} = useContext(UserContext);  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent form refresh
-    setError(null); // Clear previous errors
+    e.preventDefault(); 
+    setError(null);
 
     if (!email.trim() || !password.trim()) {
       setError("Email and password are required.");
@@ -42,7 +42,7 @@ const LoginModal = ({ isOpen, onClose }) => {
         <div
           className="hidden lg:block lg:w-1/2 bg-cover"
           style={{
-            backgroundImage: `url(https://www.tailwindtap.com/assets/components/form/userlogin/login_tailwindtap.jpg)`,
+            backgroundImage: `url(https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0)`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
