@@ -48,7 +48,7 @@ const ChatBot = () => {
     setIsBotTyping(true);
 
     try {
-      const res = await axios.post('http://localhost:3000/sendMessage', {
+      const res = await axios.post('https://wanderwise-4.onrender.com/sendMessage', {
         email,
         message: userInput,
       });
